@@ -1,0 +1,48 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+body {
+    font-family: lato;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.display{
+    display: block;
+    font-size: 24px;
+    width: 163px;
+    height: 40px;
+    text-align: right;
+    border-style: solid;
+}
+
+.row {
+    display: block;
+    width: 100%;
+    float: left;
+}
+
+.button{
+    float:left;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: skyblue;
+    text-align: center;
+    line-height: 40px;
+    border-style: solid;
+    border-width: thin;
+}
+
+.button:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+
+
+
+
