@@ -5,9 +5,13 @@ var main = function() {
     
     $(".display").text("0");
     
-    function appendNum(num){
+    function appendNum(num) {
         x = x * 10 + num;
         return x;
+    }
+    
+    function minus(num) {
+        
     }
 
     function display(x) {
@@ -21,7 +25,9 @@ var main = function() {
     });
     
     $(".minus").click(function() {
-
+        y = x;
+        x = 0;
+        display(x);
     });
     
     $(".posneg").click(function() {

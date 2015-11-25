@@ -10,13 +10,30 @@ body {
     user-select: none;
 }
 
+.everything {
+    float: left;
+    width: 250px;
+    background-color: #FFCCAC;
+    border-style: solid;
+    border-color: #505050;
+    border-radius: 20px;
+    box-shadow: 0px 4px #F56C57;
+    
+}
+
 .display{
     display: block;
+    background-color: #EAE2D6;
     font-size: 24px;
-    width: 163px;
+    width: 195px;
     height: 40px;
+    margin-left: 22px;
+    margin-bottom: 15px;
+    margin-top: 15px;
     text-align: right;
     border-style: solid;
+    box-shadow: inset 0px 4px rgba(0, 0, 0, 0,2);
+    padding-right: 5px;
 }
 
 .row {
@@ -30,16 +47,37 @@ body {
     display: block;
     width: 40px;
     height: 40px;
-    background-color: skyblue;
+    background-color: #C1E1DC;
     text-align: center;
     line-height: 40px;
     border-style: solid;
     border-width: thin;
+    margin-left: 16px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 3px 0px rgba(0,0,0,0.2);
+}
+
+.clear, .CE, .del, .divide, .x, .minus, .plus, .equals, .decimal, .posneg {
+    background-color: #FFEB94;
 }
 
 .button:hover {
-    background-color: white;
+    background-color: #9BD7D5;
     cursor: pointer;
+}
+
+.clear:hover, .CE:hover, .del:hover, .divide:hover, .x:hover, .minus:hover, .plus:hover, .equals:hover, .decimal:hover, .posneg:hover {
+    background-color: #FDD475;
+}
+.button:active {
+	box-shadow: 0px 0px #6b54d3;
+	top: 4px;
+}
+
+.button:hover {
+	box-shadow: 0px 0px #717a33;
+	top: 4px;
 }
 
 
