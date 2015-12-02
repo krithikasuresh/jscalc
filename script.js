@@ -1,91 +1,191 @@
-var main = function() {
-    var x = 0;
-    var num = 0;
-    var y = 0;
-    
-    $(".display").text("0");
-    
-    function appendNum(num) {
-        x = x * 10 + num;
-        return x;
-    }
-    
-    function minus(num) {
-        
-    }
+var x = 0;
+var y = 0;
+var operation = "";
 
-    function display(x) {
+$(".display").text("0");
+
+function appendNum(num, modifiedVar) {
+    modifiedVar = modifiedVar * 10 + num;
+    return modifiedVar;
+}
+
+function minus(num) {
+
+}
+
+function display(x) {
+    $(".display").text(x);
+}
+
+$(".plus").click(function() {
+    operation = "+";
+    display(x);
+});
+
+$(".minus").click(function() {
+
+    display(x);
+});
+
+$(".posneg").click(function() {
+    x = -x;
+    display(x);
+});
+
+$(".equals").click(function() {
+    if (operation === "+")
+    {
+        x += y;
         $(".display").text(x);
+        operation = "";
     }
-    
-    $(".plus").click(function() {
-        y += x;
-        x = 0;
+});
+
+$(".CE").click(function() {
+    $(".display").text("0");
+    x = 0;
+    y = 0;
+    operation = "";
+});
+
+// number buttons
+$(".one").click(function() {
+    if (operation === "")
+    {
+        x = appendNum(1, x);
+        display(x);
+    }
+    else
+    {
+        y = appendNum(1,y);
         display(y);
-    });
-    
-    $(".minus").click(function() {
-        y = x;
-        x = 0;
-        display(x);
-    });
-    
-    $(".posneg").click(function() {
-        x = -x;
-        display(x);
-    });
+    }
 
-    $(".equals").click(function() {
-        $(".display").text(x+y);
-    });
-    
-    $(".CE").click(function() {
-        $(".display").text("0");
-        x = 0;
-        y = 0;
-    });
 
-    // number buttons
-    $(".one").click(function() {
-        appendNum(1);
+});
+$(".two").click(function() {
+    if (operation === "")
+    {
+        x = appendNum(2, x);
         display(x);
-    });
-    $(".two").click(function() {
-        appendNum(2);
-        display(x);
-    });
-    $(".three").click(function() {
-        appendNum(3);
-        display(x);
-    });
-    $(".four").click(function() {
-        appendNum(4);
-        display(x);
-    }); 
-    $(".five").click(function() {
-        appendNum(5);
-        display(x);
-    });
-    $(".six").click(function() {
-        appendNum(6);
-        display(x);
-    });
-    $(".seven").click(function() {
-        appendNum(7);
-        display(x);
-    }); 
-    $(".eight").click(function() {
-        appendNum(8);
-        display(x);
-    });
-    $(".nine").click(function() {
-        appendNum(9);
-        display(x);
-    });
-    $(".zero").click(function() {
-        appendNum(0);
-        display(x);
-    });
-};
+    }
+    else
+    {
+        y = appendNum(2,y);
+        display(y);
+    }
 
-$(document).ready(main);
+
+});
+$(".three").click(function() {
+    if (operation === "")
+    {
+        x = appendNum(3, x);
+        display(x);
+    }
+    else
+    {
+        y = appendNum(3,y);
+        display(y);
+    }
+
+
+});
+$(".four").click(function() {
+    if (operation === "")
+    {
+        x = appendNum(4, x);
+        display(x);
+    }
+    else
+    {
+        y = appendNum(4,y);
+        display(y);
+    }
+
+
+}); 
+$(".five").click(function() {
+    if (operation === "")
+    {
+        x = appendNum(5, x);
+        display(x);
+    }
+    else
+    {
+        y = appendNum(5,y);
+        display(y);
+    }
+
+
+});
+$(".six").click(function() {
+    if (operation === "")
+    {
+        x = appendNum(6, x);
+        display(x);
+    }
+    else
+    {
+        y = appendNum(6,y);
+        display(y);
+    }
+
+
+});
+$(".seven").click(function() {
+    if (operation === "")
+    {
+        x = appendNum(7, x);
+        display(x);
+    }
+    else
+    {
+        y = appendNum(7,y);
+        display(y);
+    }
+
+
+}); 
+$(".eight").click(function() {
+    if (operation === "")
+    {
+        x = appendNum(8, x);
+        display(x);
+    }
+    else
+    {
+        y = appendNum(8,y);
+        display(y);
+    }
+
+
+});
+$(".nine").click(function() {
+    if (operation === "")
+    {
+        x = appendNum(9, x);
+        display(x);
+    }
+    else
+    {
+        y = appendNum(9,y);
+        display(y);
+    }
+
+
+});
+$(".zero").click(function() {
+    if (operation === "")
+    {
+        x = appendNum(0, x);
+        display(x);
+    }
+    else
+    {
+        y = appendNum(0,y);
+        display(y);
+    }
+
+
+});
