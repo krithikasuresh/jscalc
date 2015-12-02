@@ -36,9 +36,22 @@ $(".equals").click(function() {
     if (operation === "+")
     {
         x += y;
-        $(".display").text(x);
-        operation = "";
     }
+    else if (operation === "-")
+    {
+        x -= y;
+    }
+    else if (operation === "/")
+    {
+        x /= y;
+    }
+    else if (operation === "*")
+    {
+        x *= y;
+    }
+    display(x);
+    operation = "";
+    y = 0;
 });
 
 $(".CE").click(function() {
